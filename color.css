@@ -1,0 +1,73 @@
+/* {
+    cursor: url("crosshair.png"), pointer;
+}
+*/
+#wrapper {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+body{
+    background-color:  rgb(109, 109, 109);
+    
+    
+
+}
+
+header{
+    background-color:rgb(0, 0, 0); color:rgb(214, 214, 214);
+    padding-left: 50px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    line-height: 400%;
+    text-indent: 1em;
+    text-shadow: 4px 4px 7px #676767;
+}
+
+h1{
+    margin-bottom: 0%;  margin-top: 0%;
+}
+nav {
+    background-image: linear-gradient( to right, rgb(23, 35, 65), rgb(38, 45, 54));
+    padding: 1rem;
+}
+
+nav{background-color: #BBDEFB; font-weight: bold; padding: 1rem;}
+
+nav ul { 
+    list-style-type: none;
+    margin: 0; padding: 0; display: flex; justify-content: space-around;
+}
+nav ul li { 
+    display: flex;
+}
+nav ul li a {
+    color: #FFFFFF; text-decoration: none;
+     padding : 0.5rem 1rem; display: block;
+}
+
+main {
+
+    background-color: rgb(0, 0, 0); color:aliceblue;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    width: 100%;
+
+}
+
+p{
+
+    line-height: 300%;
+    text-align: left;
+    max-width: 800px;
+    
+}
+
+.Title {
+    text-align: center;
+    color: maroon;
+
+}
+
+
+
