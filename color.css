@@ -2,18 +2,18 @@
     cursor: url("crosshair.png"), pointer;
 }
 */
-#wrapper {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
 
+*{
+    margin: 0;
+    box-sizing: border-box;
+    
 }
 
 body{
-    background-color:  rgb(109, 109, 109);
-    
-    
 
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
 }
 
 header{
@@ -25,16 +25,27 @@ header{
     text-shadow: 4px 4px 7px #676767;
 }
 
-h1{
-    margin-bottom: 0%;  margin-top: 0%;
-}
-nav {
-    background-image: linear-gradient( to right, rgb(23, 35, 65), rgb(38, 45, 54));
+.navigationBar {
+    background-image: linear-gradient( to right, rgb(0, 0, 0), rgb(39, 39, 39));
     padding: 1rem;
+    text-decoration: none;
 }
-
-nav{background-color: #BBDEFB; font-weight: bold; padding: 1rem;}
-
+.navigationDiv {
+    display: flex; align-items: center; justify-content: space-between;
+}
+.navigationLogo a {
+    font-size: 30px; font-weight: bold; color: #FFFFFF; text-decoration: none;
+}
+.navigationLogo img {
+    width: 40px;
+    margin-right: 10px;
+}
+.container {
+    max-width: 100%;
+    min-width: 100%;
+    display: grid;
+    justify-items: center;
+}
 nav ul { 
     list-style-type: none;
     margin: 0; padding: 0; display: flex; justify-content: space-around;
@@ -47,25 +58,28 @@ nav ul li a {
      padding : 0.5rem 1rem; display: block;
 }
 
+h1{
+    margin-top: 0%; margin-bottom: 0%;
+}
 main {
 
-    background-color: rgb(0, 0, 0); color:aliceblue;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     width: 100%;
 
 }
 
 p{
-
     line-height: 300%;
     text-align: left;
-    max-width: 800px;
-    
+    max-width: 480px;
+    padding-left: 20px;
+
 }
 
 .Title {
     text-align: center;
     color: maroon;
+    text-shadow: #676767;
 
 }
 
