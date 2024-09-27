@@ -1,30 +1,74 @@
 <!DOCTYPE html>
-<html lang ="en">
+<html lang="en">
 <head>
-<title>Mafia Game</title>
-<meta charset="utf-8">
-<link rel = "stylesheet" href="color.css">
+    <title>Mafia Game</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="color.css">
 </head>
 <body>
-    <nav class = "navigationBar">
+    <nav class="navigationBar">
         <div class="navigationDiv">
-            <div class="navigationLogo"><a href="mafialogo.png">Mafia Madness</a></div>
-             <ul>
-                <li><a href ="index.html">Home </a> </li>
-                <li><a href ="playGame.html">Play</a></li>
-                <li><a href ="#instrucions">Instructions</a></li>
-                <li><a href ="#contact">Contact</a></li>
-            </ul> 
+            <div class="navigationLogo">
+               <a href = "#"><img src ="mafiaproj/mafiaproj/mafialogo.png" alt="logo">Mafia Madness</a> 
+            </div>
+
+            <ul class ="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="playGame.html">Play</a></li>
+                <li><a href="#instrucions">Instructions</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
     </nav>
-<main>
-<div id ="wrapper">
-    <h1 class="Title">Welcome to Mafia Madness!</h1>
-    <p> Step into the shadowy world of deception, strategy, and high-stakes bluffing with Mafia Madness,
-         the ultimate online version of the classic party game, Mafia! Whether you’re a cunning conspirator, 
-         a sharp-eyed detective, or just love the thrill of outsmarting your friends, our game is designed 
-         to keep you on the edge of your seat!</p>
-</div>
-</main>
+    <main>
+        <div id="wrapper">
+            <h1 class="Title">Welcome to Mafia Madness!</h1>
+            <p class ="introP">Step into the shadowy world of deception, strategy, and high-stakes bluffing with Mafia Madness, the ultimate online version of the classic party game, Mafia! Whether you’re a cunning conspirator, a sharp-eyed detective, or just love the thrill of outsmarting your friends, our game is designed to keep you on the edge of your seat!</p>
+        </div>
+    </main>
+    <h1>Chatroom</h1>
+    <div id="chat"></div>
+    <input type="text" id="username" placeholder="Enter your username" />
+    <input type="text" id="message" placeholder="Enter your message" disabled />
+    <button onclick="sendMessage()">Send</button>
+
+    <script>
+        var socket = new WebSocket("ws://" + window.location.host + "/chatroom");
+        var username = "";
+
+        document.getElementById("username").addEventListener("input", function() {
+            username = this.value.trim();
+            document.getElementById("message").disabled = username === "";
+        });
+
+        socket.onopen = function(event) {
+            console.log("WebSocket is open now.");
+        };
+
+        socket.onmessage = function(event) {
+            var chatArea = document.getElementById("chat");
+            chatArea.innerHTML += event.data + "<br>";
+            console.log("Received message: " + event.data);
+        };
+
+        socket.onclose = function(event) {
+            console.log("WebSocket is closed now.");
+        };
+
+        socket.onerror = function(error) {
+            console.log("WebSocket error: " + error);
+        };
+
+        function sendMessage() {
+            var input = document.getElementById("message");
+            var message = input.value.trim();
+            if (message && username) {
+                var formattedMessage = "[" + username + "]: " + message;
+                socket.send(formattedMessage);
+                console.log("Sent message: " + formattedMessage);
+                input.value = "";
+            }
+        }
+    </script>
 </body>
 </html>
