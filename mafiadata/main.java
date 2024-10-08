@@ -1,4 +1,4 @@
-package mafiaproj;
+package mafiadata;
 import javax.swing.*;
 import java.util.*;
 public class main {

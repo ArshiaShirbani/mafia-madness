@@ -1,4 +1,4 @@
-package mafiaproj;
+package mafiadata;
 public class player {
     private String Username;
     private role role;

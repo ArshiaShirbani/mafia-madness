@@ -1,4 +1,4 @@
-package mafiaproj;
+package mafiadata;
 import java.util.*;
 
 public class game {

@@ -1,10 +1,10 @@
-package mafiaproj;
+package mafiadata;
 
-public class spectator extends role {
+public class villager extends role {
 
-    String name = "spectator";
+    String name = "villager";
     
-    public spectator(){
+    public villager(){
         this.role_Id = 0;
         Boolean canKill;
         Boolean canChat;
@@ -13,6 +13,6 @@ public class spectator extends role {
 
     @Override 
     public String getRoleName(){
-        return "spectator";
+        return "villager";
     }
 }

@@ -1,4 +1,4 @@
-package mafiaproj;
+package mafiadata;
 
 public abstract class role {
    /*  private String Villager;
