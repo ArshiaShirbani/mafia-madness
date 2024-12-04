@@ -36,19 +36,23 @@ header{
 }
 
 .navBar {
-    padding: 1rem;
-    text-decoration: none;
+    padding: 0;
     text-align: center;
     font-weight: bold;
+    font-size: 120%;
 
+}
+
+.navBar a{
+    text-decoration: none;
 }
 
 
 .menu { 
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
     background-color: #676767;
+    list-style-type: none;
+    padding-left: 0;
+    font-size: 1.2em;
 }
 
 .menu li a {
@@ -150,13 +154,21 @@ footer{
     header{ background-color: black;}
 
   
-    .menu{ width: 100%; height: 100px;
-        text-align: center; padding: 1.5em;
+    .menu{ 
+        width: 100%;
+        height: 100px;
+        display: flex; 
+        flex-wrap: nowrap; 
+        justify-content: space-around;
+        text-align: center;
     }
     
-    .menu li { display: inline;}
+    .menu li{ border: none;
+    }
+   
     .menu li a { display: inline; height: 100px;
         border: 0; font-size: 20px;}
+
 
     .introP{ background-color: #676767; float: right;
         width: 45%; height: 720px;
@@ -164,10 +176,30 @@ footer{
 
     #instructions{width: 45%; height: 750px;  overflow: scroll}
     .instructDescript{ border: 3px solid black;}
-    footer{ text-align: center;} 
+    footer{ display: grid; text-align: center;} 
 }
 
 @media screen and (min-width:1024px){
+
+    .menu{
+        flex-direction: column;
+        padding: top 1em;
+        font-size: 55px;
+
+
+    }
+
+    .introP{
+        width: 50%;
+        height: auto;
+        overflow: hidden;
+    }
+
+    .instructDescript{
+        background-color: #676767;
+        color: #000000;
+    }
+
 
     #wrapper {
         width: 80%;
@@ -180,28 +212,19 @@ footer{
             "nav  footer" ;
     }
 
+    .navBar{
+        grid-area: nav;
+        text-align: center;
+        padding: 15px;
+        background-color: #676767;
+    }
+
     header{
         grid-area: header;
 
     }
     
-    }
-    .navBar{
-        grid-area: nav;
-        text-align: left;
-        padding-left: 1em;
-
-      
-
-    }
-
-     .menu{
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: space-around;
-        flex-direction: column;
-        padding-top: 1em;
-    }
+    
 
     main{
         display: block;
@@ -216,13 +239,9 @@ footer{
        
     }
 
-#chat {
-    width: 480px;
-    height: auto;
-    overflow: scroll;
-   
+
+
+
+
+
 }
-
-
-
-

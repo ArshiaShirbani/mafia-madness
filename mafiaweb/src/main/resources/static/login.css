@@ -5,12 +5,13 @@
     font-family: 'Times New Roman', Times, serif;
 }
 
+
 body{
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-image: url(login2.jpg);
+    background-image: url(images/login2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -113,4 +114,7 @@ body{
 
 .register-link p a:hover{
     text-decoration: underline;
+}
+.bgmusic{
+    display: none;
 }
