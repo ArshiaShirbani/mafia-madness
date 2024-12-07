@@ -55,7 +55,7 @@ footer{
 @media screen and (min-width: 600px){
 
     body{
-        background-color: blueviolet;
+       background-image: url(images/Cats2.jpg); background-repeat: repeat-x repeat-y;
     }
     header{
         font-size: 4em;
@@ -93,8 +93,8 @@ footer{
 
 
     body{
-        background-color: blue;
-    }
+        background-image: url(images/Cats2.jpg); background-repeat:round;
+     }
 
 
 

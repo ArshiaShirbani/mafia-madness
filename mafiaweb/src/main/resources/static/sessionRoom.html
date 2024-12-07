@@ -3,80 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MafiaMadness:: SessionRoom</title>
-    <link rel="stylesheet" href="gameWindow.css">
+    <title>MafiaMadness:: sessionRoom
+    </title>
+    <link rel="stylesheet" href="sessionRoom.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-
-<div id = gridContainer>
-<header>
-Mafia Madness <i class='bx bxs-mask'></i>
-</header>
-
-
-<div id ="gamePlay">
-
-</div>
-
-
-
-<div id="chat">
-    <h1>Chatroom <i class='bx bxs-message-rounded-dots' ></i></h1> 
-    <input type="text" id="username" placeholder="Enter your username" />
-    <input type="text" id="message" placeholder="Enter your message" disabled />
-    <button onclick="sendMessage()">Send</button>
-
-    <script>
-        var socket = new WebSocket("ws://" + window.location.host + "/chatroom");
-        var username = "";
-
-        document.getElementById("username").addEventListener("input", function() {
-            username = this.value.trim();
-            document.getElementById("message").disabled = username === "";
-        });
-
-        socket.onopen = function(event) {
-            console.log("WebSocket is open now.");
-        };
-
-        socket.onmessage = function(event) {
-            var chatArea = document.getElementById("chat");
-            chatArea.innerHTML += event.data + "<br>";
-            console.log("Received message: " + event.data);
-        };
-
-        socket.onclose = function(event) {
-            console.log("WebSocket is closed now.");
-        };
-
-        socket.onerror = function(error) {
-            console.log("WebSocket error: " + error);
-        };
-
-        function sendMessage() {
-            var input = document.getElementById("message");
-            var message = input.value.trim();
-            if (message && username) {
-                var formattedMessage = "[" + username + "]: " + message;
-                socket.send(formattedMessage);
-                console.log("Sent message: " + formattedMessage);
-                input.value = "";
-            }
-        }
-    </script>
-    </div>
- 
-
-    <footer>
-        <h3>&copy;MafiaMadness2024</h3>
-    </footer>
-
-
-
-
-
-
-</div> 
 </body>
-</html>
