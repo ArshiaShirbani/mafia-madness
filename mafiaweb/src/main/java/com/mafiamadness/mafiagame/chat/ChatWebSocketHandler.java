@@ -1,5 +1,6 @@
-package com.mafiamadness.mafiaweb.chat;
+package com.mafiamadness.mafiagame.chat;
 
+import org.springframework.boot.SpringApplication;
 import org.springframework.web.socket.*;
 import org.springframework.web.socket.handler.TextWebSocketHandler;
 import org.springframework.stereotype.Component;

@@ -1,4 +1,4 @@
-package com.mafiamadness.mafiaweb;
+package com.mafiamadness.mafiagame;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

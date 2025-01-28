@@ -99,6 +99,11 @@ body{
     font-size: 16px;
     color: #333333;
     font-weight: 600;
+    transition: 0.5s ease;
+}
+
+#wrapper .btn:hover{
+    background-color: maroon;
 }
 
 #wrapper .register-link{

@@ -1,48 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<title>MafiaMadness:: Login</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="login.css">
-<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>MafiaMadness:: Login</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
+
 <body>
 
 
-<div id = "wrapper">
-    <form action="">
+    <div id="wrapper">
+        <form action="">
 
             <h1>Login</h1>
-        <div class="input-box">
-            <input type="text" id="userId" placeholder="Username" required>
-            <i class='bx bxs-user'></i>
-        </div>
-        <div class="input-box">
-            <input type="password" id="passwordId" placeholder="Password" required>
-            <i class='bx bxs-lock' ></i>
-        </div>
-        <div class = remember-forgot>
-            <label><input type="checkbox">Remember Me</label>
-            <a href="#">Forgot Password</a>
-        </div>
-            <button type ="submit" class ="btn" id="loginBtn">Login</button> 
-        <div class="register-link">
-        <p>Don't have an account? <a href="#">Register</a></p>
-        </div>
-    </form>
-                                    <!-- TO DO LIST -->
-    <!-- CONFIGURE JAVASCRIPT FOR SUBMITTING FORM , FORGOT PASSWORD, REMEMBER ME, AND REGISTER -->
-    <!-- ADD A WAY TO MUTE AUDIO POSSIBLY A BUTTON -->
+            <div class="input-box">
+                <input type="text" id="userId" placeholder="Username" required>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box">
+                <input type="password" id="passwordId" placeholder="Password" required>
+                <i class='bx bxs-lock'></i>
+            </div>
+            <div class=remember-forgot>
+                <label><input type="checkbox">Remember Me</label>
+                <a href="#">Forgot Password</a>
+            </div>
+            <button type="button" class="btn" id="loginBtn" onclick="signin()">Login</button>
+            <div class="register-link">
+                <p>Don't have an account? <a href="#">Register</a></p>
+            </div>
+        </form>
+        <!-- TO DO LIST -->
+        <!-- CONFIGURE JAVASCRIPT FOR SUBMITTING FORM , FORGOT PASSWORD, REMEMBER ME, AND REGISTER -->
+        <!-- ADD A WAY TO MUTE AUDIO POSSIBLY A BUTTON -->
 
 
-    <!--<audio class ="bgmusic" autoplay=""loop="" 
+        <!--<audio class ="bgmusic" autoplay=""loop="" 
         source src= "music/Dark_Suspense_Mystery_Mysterious_Tension_Music_No_Copyright_Investigation_Thriller_Background_[_YouConvert.net_].mp3">
     </audio> -->
-</div>
+    </div>
 
 
-<script src="login.js"></script>
+    <script src="login.js"></script>
 </body>
-</html>
 
+</html>

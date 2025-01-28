@@ -1,5 +1,6 @@
-package com.mafiamadness.mafiaweb.chat;
+package com.mafiamadness.mafiagame.chat;
 
+import org.springframework.boot.SpringApplication;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.socket.config.annotation.EnableWebSocket;
 import org.springframework.web.socket.config.annotation.WebSocketConfigurer;
