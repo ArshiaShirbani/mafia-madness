@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MafiaMadness:: Register</title>
+    <link rel="stylesheet" href="register.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div id="wrapper">
+        <form id="registerForm">
+
+            <h1>Register</h1>
+            <div class="input-box">
+                <input type="text" id="userId" placeholder="Username" required>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box">
+                <input type="current-password" id="passwordId" placeholder="Password" required>
+                <i class='bx bxs-lock'></i>
+            </div>
+            <button type="button" class="btn" id="submitBtn" onclick="CreateAccount()">Create Account</button>
+        </form>
+    </div>
+<script src="register.js"></script>
+</body>
+
+</html>

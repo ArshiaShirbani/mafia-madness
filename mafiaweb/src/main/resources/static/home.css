@@ -1,0 +1,391 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --BODY-BG-S: rgb(77, 77, 77);
+    --HEADER-BGCOLOR: rgb(0, 0, 0);
+    --HEADER-COLOR: WHITE;
+    --MENU-BGCOLOR: gray;
+    --MENU-HOVER: hsl(0, 0%, 30%);
+
+    /*Medium Display */
+    --WRAPPER-COLOR: linear-gradient(to bottom, rgb(114, 56, 56), maroon);
+    --MENU-BGCOLOR-M: rgb(54, 54, 54);
+
+
+}
+
+/*
+    Mobile Display
+*/
+
+
+body {
+    background-color: var(--BODY-BACKGROUND-S);
+}
+
+#wrapper {
+    background-image: var(--WRAPPER-COLOR);
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header {
+    background-color: var(--HEADER-BGCOLOR);
+    color: var(--HEADER-COLOR);
+    text-align: center;
+}
+
+.hd-title {
+    padding: 0.25rem 0.5em;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+header h2 {
+    color: white;
+    font-size: 2.5rem;
+    text-shadow: 1px 1px 1px black;
+}
+
+.menu-button {
+    background-color: transparent;
+    border: none;
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    position: relative;
+}
+
+.menu-icon,
+.menu-icon::before,
+.menu-icon::after {
+    background-color: var(--HEADER-COLOR);
+    width: 40px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    align-self: center;
+    transition: all 0.5s;
+}
+
+.menu-icon::before,
+.menu-icon::after {
+    content: "";
+}
+
+.menu-icon::before {
+    transform: translate(-20px, -12px);
+}
+
+.menu-icon::after {
+    transform: translate(-20px, 12px);
+}
+
+header img {
+    width: 20%;
+}
+
+:is(header:hover, header:focus-within) .menu-icon {
+    background-color: transparent;
+    transform: rotate(360deg);
+}
+
+:is(header:hover, header:focus-within) .menu-icon::before {
+    transform: translate(-20px) rotate(45deg);
+}
+
+:is(header:hover, header:focus-within) .menu-icon::after {
+    transform: translate(-20px) rotate(-45deg);
+}
+
+:is(header:hover, header:focus-within) nav {
+    display: block;
+}
+
+.navBar {
+    display: none;
+    transform-origin: top center;
+    animation: showMenu 0.5s ease forwards;
+}
+
+@keyframes showMenu {
+
+    0% {
+        transform: scaleY(0);
+    }
+
+    80% {
+        transform: scaleY(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.menu {
+    list-style-type: none;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.menu li {
+    background-color: var(--MENU-BGCOLOR);
+    padding: .5rem;
+    border-top: 3px solid black;
+    font-size: 2rem;
+}
+
+.menu li:hover,
+.menu li:focus-within {
+    background-color: var(--MENU-HOVER);
+    cursor: url(images/MafiaGun.png), auto;
+    transition: ease-in-out 0.5s;
+}
+
+.menu li:active {
+    background-color: rgb(180, 180, 180);
+    transition: all 0.1s;
+}
+
+.menu li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    cursor: url(images/MafiaGun.png), auto;
+}
+
+.hero {
+    width: 90%;
+    height: 10%;
+    margin: 2em auto;
+}
+
+.hero img {
+    width: 100%;
+}
+
+main {
+    text-align: center;
+    margin-top: 20vh;
+}
+
+#logo {
+    display: none;
+}
+
+main .subtitle {
+    display: inline-block;
+    margin: 1.5em auto;
+    color: white;
+    font-size: 1.75rem;
+    text-shadow: 2px 2px 2px black;
+}
+
+main h2 {
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 5px solid black;
+    animation: typing 5s infinite steps(42),
+        cursor .4s step-end infinite alternate;
+}
+
+@keyframes cursor {
+    50% {
+        border-color: transparent;
+    }
+
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+
+}
+
+.subtitleColored {
+    background: linear-gradient(to left, maroon, red);
+    background-clip: text;
+    color: transparent;
+}
+
+main p {
+    color: white;
+    padding: 1em;
+    font-size: 1.5rem;
+    ;
+}
+
+main #instructionList {
+    width: 80%;
+    margin: .5em auto;
+
+}
+
+main .instructionStep {
+    margin: 1.25em 0;
+    font-size: 2rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    text-align: left;
+}
+
+.subtitleColored2 {
+    background: linear-gradient(to left, rgb(248, 237, 237), rgb(0, 0, 0));
+    background-clip: text;
+    color: transparent;
+    padding-left: 5%;
+    font-weight: bold;
+    text-shadow: 2.5px 1px 1px rgb(196, 2, 2);
+    overflow-x: auto;
+}
+
+main .instructionImages {
+    width: 75%;
+    margin: 1em 0;
+    border: 5px solid black;
+}
+
+main .instructionDescription {
+    font-size: 1.25rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
+
+main .instructionDescription ul {
+    list-style: none;
+}
+
+main .instructionDescription li {
+    padding: 1em;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: black;
+    color: white;
+    text-align: center;
+    height: 20vh;
+}
+
+@media screen and (min-width: 600px) {
+
+    body {
+        background-color: black;
+    }
+
+    header{
+        background: rgb(114, 56, 56);
+    }
+
+    #wrapper {
+        display: grid;
+    }
+
+    .hero {
+
+        width: 80%;
+        margin: 3em auto;
+    }
+
+    .hero img {
+        width: 90%;
+    }
+
+    #logo {
+        display: block;
+        margin: 0 auto;
+        width: 50%;
+        animation: coin-flip 12s linear infinite normal forwards;
+        animation-delay: 10s;
+    }
+
+    @keyframes coin-flip {
+
+        0% {
+            transform: translate(0);
+        }
+        10% {
+            transform: translateY(-300px) rotateX(-540deg)
+        }
+        20%{
+                transform: translate(0);   
+        }
+        100%{
+            transform: translate(0);
+        }
+
+            
+    }
+
+    
+    main .subtitle {
+        margin: 3.5em auto;
+        color: white;
+        font-size: 1.75rem;
+        text-shadow: 2px 2px 2px black;
+        
+    }
+  
+    .menu-button{
+        border-radius: 25%;
+        background-color: maroon;
+        border: 1.5px solid black;
+    }
+
+    .menu-icon{
+        margin-left: 3px;
+    }
+    .menu{
+        border-radius: 25px;
+        background-color: var(--MENU-BGCOLOR-M);
+        width: 25%;
+        margin-left: auto;
+    
+    }
+    .menu li{
+        border-top: 0;
+        background-color: transparent;
+        padding: .75em;
+       
+    }
+
+    .navBar {
+        display: none;
+        transform-origin: top center;
+        animation: showMenu 0.5s ease forwards;
+    }
+
+    @keyframes showMenu {
+
+        0% {
+            transform: scaleY(0)   translateY(100px) 
+        }
+    
+        80% {
+            transform: scaleY(1.2) translateX(-25px) translateY(100px);
+        }
+    
+        100% {
+            transform: scale(1) translateX(-25px) translateY(100px);
+        }
+    }
+    
+    .hero img{
+        width: 90%;
+     
+    }
+}
